@@ -1,0 +1,290 @@
+@import 'normalize';
+@import 'base';
+@import 'adapter';
+
+
+/*活动概览*/
+.viewport {  
+  max-width: 750px;
+  margin: 0 auto;
+
+  padding-top: 4.267rem;
+  padding-bottom: 17.067rem;
+}
+
+/*手机顶部*/
+.header {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  z-index: 100;
+
+  img{
+    width: 100%;
+  }
+}
+
+.overview {
+  /*活动封面*/
+  .cover {
+    position: relative;
+
+    a {
+      position: absolute;
+    }
+    .collect {
+      top: 1rem;
+      right: 1.333rem;
+
+      width: 1.6rem;
+      height: 1.6rem;
+
+      background-image: url(../uploads/love.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .count {
+      bottom: 1rem;
+      left: 1rem;
+
+      width: 5.6rem;
+      height: 1.333rem;
+      border-radius: 1.333rem;
+      padding-right: 0.467rem;
+
+      font-size: 0.6rem;
+      color: #fff;
+      text-align: right;
+      line-height: 1.333rem;
+
+      background-color: rgba(0, 0, 0, 0.4);
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+
+        width: 1.333rem;
+        height: 1.333rem;
+
+        background-image: url(../uploads/love.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  /*活动信息*/
+  .info {
+    position: relative;
+    padding: 0.867rem 1rem 2.667rem;
+    height: 6rem;
+    background-color: #fff;
+
+    .name {
+      font-size: 1rem;
+      color: #3c3c3c;
+    }
+    .text {
+      position: absolute;
+      bottom: 0.8rem;
+
+      font-size: 0.733rem;
+      color: #b4b4b4;
+
+      span {
+        margin-right: 0.867rem;
+
+        &::before {
+          margin-right: 0.333rem;
+        }
+      }
+    }
+    .status {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 1rem;
+
+      font-size: 1.067rem;
+      color: #fe6249;
+    }
+  }
+}
+
+/*活动信息*/
+.meta {
+  padding-left: 1rem;
+  margin-top: 0.667rem;
+
+  font-size: 0;
+  background-color: #fff;
+
+  li {
+    padding: 1.333rem 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    font-size: 0.8rem;
+    color: #3c3c3c;
+
+    &::before {
+      position: relative;
+      top: -2px;
+      margin-right: 0.667rem;
+    }
+  }
+}
+
+/*活动详情*/
+.detail {
+  padding:0 1rem;
+  background-color: #fff;
+
+  .title {
+    padding: 1.333rem 0 1rem ;
+    margin-right: -1rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    h4 {    
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #3c3c3c;
+    }
+  }
+
+  .content {
+    position: relative;
+    overflow: hidden;
+    height: 33.333rem;
+
+    h4 {
+      padding: 0.667rem 0 0.5rem;
+
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #3C3C3C;
+    }
+
+    p {
+      line-height: 1.5;
+      font-size:  0.8rem;
+      color: #A0A0A0;
+    }
+
+    .linear {
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      height: 5.6rem;
+
+      background-image: linear-gradient(
+        to top,
+        #fff,
+        rgba(255,255,255,0)
+      );
+
+      a {
+        display: block;
+
+        text-align: center;
+        padding-top: 3.333rem;
+
+        color: #45B8FF;
+        font-size: 0.933rem;
+
+        &::after {
+          position: relative;
+          top: 0.1rem;
+
+          margin-left: 8px;
+          content: "\e5cf";
+          font-family: 'icomoon';
+        }
+      }
+    }
+  }
+}
+
+/*参加须知*/
+.tips {
+  padding: 0 1rem;
+  margin-top: 0.867rem;
+  background-color: #fff;
+
+  .title {
+    padding: 1.333rem 0 0.933rem;
+    margin-right: -1rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    h4 {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
+
+  .content {
+    padding-top: 0.667rem;
+    padding-bottom: 0.933rem;
+
+    li {
+      position: relative;
+      padding-left: 1.333rem;
+
+      color: #A0A0A0;
+      font-size: 0.8rem;
+      line-height: 1.467rem;
+
+      &::before {
+        position: absolute;
+        top: 0.467rem;
+        left: 0.267rem;
+        content:"";
+
+        width: 0.533rem;
+        height: 0.533rem;
+        border-radius: 50%;
+
+        background-color: #d8d8d8;
+      }
+    }
+
+    .consult {
+      display: block;
+
+      margin-top: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+
+      text-align: center;
+      line-height: 2.533rem;
+      color: #969696;
+      font-size: 0.933rem;
+
+      &::before {
+        margin-right: 0.467rem;
+      }  
+    }
+  }
+}
+
+// 底部tabs
+.tabs {
+  position: fixed;
+  bottom: 0;
+  // left: 0;
+  width: 100%;
+  max-width: 750px;
+
+  font-size: 1.333rem;
+  text-align: center;
+  line-height: 3.333rem;
+
+  background-color: #FECB49;
+
+  a{
+    display: block;
+    width: 100%;
+    height: 3.333rem;
+    color: #fff;
+  }
+}
